@@ -43,12 +43,13 @@ struct ContentView: View {
             
             // Enhanced with OpenType features for better dollar sign
             Text("$123.45")
-                .font(.system(
-                    size: 24,
-                    weight: .bold,
-                    design: .rounded,
-                    openTypeFeatures: ["cv09": 1, "cv10": 1]
-                )
+                .font(
+                    .system(
+                        size: 24,
+                        weight: .bold,
+                        design: .rounded,
+                        openTypeFeatures: ["cv09": 1, "cv10": 1]
+                    )
                 )
         }
     }
@@ -63,13 +64,14 @@ Character variants provide alternative glyphs for specific characters:
 
 ```swift
 Text("$199.99")
-    .font(.system(
-        size: 20,
-        openTypeFeatures: [
-            OpenTypeFeatures.characterVariant(9): 1,  // cv09
-            OpenTypeFeatures.characterVariant(10): 1  // cv10
-        ]
-    )
+    .font(
+        .system(
+            size: 20,
+            openTypeFeatures: [
+                OpenTypeFeatures.characterVariant(9): 1,  // cv09
+                OpenTypeFeatures.characterVariant(10): 1  // cv10
+            ]
+        )
     )
 ```
 
@@ -79,12 +81,13 @@ Stylistic sets apply coordinated design changes:
 
 ```swift
 Text("Typography")
-    .font(.system(
-        size: 18,
-        openTypeFeatures: [
-            OpenTypeFeatures.stylisticSet(1): 1  // ss01
-        ]
-    )
+    .font(
+        .system(
+            size: 18,
+            openTypeFeatures: [
+                OpenTypeFeatures.stylisticSet(1): 1  // ss01
+            ]
+        )
     )
 ```
 
@@ -94,14 +97,15 @@ Control text rendering features:
 
 ```swift
 Text("Office")
-    .font(.system(
-        size: 16,
-        features: [
-            OpenTypeFeatures.standardLigatures: true,
-            OpenTypeFeatures.discretionaryLigatures: false,
-            OpenTypeFeatures.kerning: true
-        ]
-    )
+    .font(
+        .system(
+            size: 16,
+            features: [
+                OpenTypeFeatures.standardLigatures: true,
+                OpenTypeFeatures.discretionaryLigatures: false,
+                OpenTypeFeatures.kerning: true
+            ]
+        )
     )
 ```
 
@@ -111,14 +115,15 @@ For simple on/off features, use the boolean syntax:
 
 ```swift
 Text("Code 0123")
-    .font(.system(
-        size: 14,
-        design: .monospaced,
-        features: [
-            OpenTypeFeatures.slashedZero: true,
-            OpenTypeFeatures.standardLigatures: false
-        ]
-    )
+    .font(
+        .system(
+            size: 14,
+            design: .monospaced,
+            features: [
+                OpenTypeFeatures.slashedZero: true,
+                OpenTypeFeatures.standardLigatures: false
+            ]
+        )
     )
 ```
 
@@ -157,7 +162,8 @@ let currencyStyle = CustomFontStyle(
     openTypeFeatures: ["cv09": 1, "cv10": 1]
 )
 
-Text("$4,299.00").font(currencyStyle.swiftUI)
+Text("$4,299.00")
+    .font(currencyStyle.swiftUI)
 ```
 
 ### Theme Integration
@@ -207,12 +213,13 @@ Improve currency display with better dollar sign rendering:
 
 ```swift
 Text("$4,299.99")
-    .font(.system(
-        size: 32,
-        weight: .bold,
-        design: .rounded,
-        openTypeFeatures: ["cv09": 1, "cv10": 1]
-    )
+    .font(
+        .system(
+            size: 32,
+            weight: .bold,
+            design: .rounded,
+            openTypeFeatures: ["cv09": 1, "cv10": 1]
+        )
     )
 ```
 
@@ -224,14 +231,15 @@ Enhance code readability:
 
 ```swift
 Text("let value = 0123")
-    .font(.system(
-        size: 14,
-        design: .monospaced,
-        features: [
-            OpenTypeFeatures.slashedZero: true,
-            OpenTypeFeatures.standardLigatures: false
-        ]
-    )
+    .font(
+        .system(
+            size: 14,
+            design: .monospaced,
+            features: [
+                OpenTypeFeatures.slashedZero: true,
+                OpenTypeFeatures.standardLigatures: false
+            ]
+        )
     )
 ```
 
@@ -241,15 +249,16 @@ Access advanced typographic features:
 
 ```swift
 Text("Beautiful Typography")
-    .font(.system(
-        size: 24,
-        weight: .light,
-        design: .serif,
-        openTypeFeatures: [
-            OpenTypeFeatures.stylisticSet(1): 1,
-            OpenTypeFeatures.discretionaryLigatures: 1
-        ]
-    )
+    .font(
+        .system(
+            size: 24,
+            weight: .light,
+            design: .serif,
+            openTypeFeatures: [
+                OpenTypeFeatures.stylisticSet(1): 1,
+                OpenTypeFeatures.discretionaryLigatures: 1
+            ]
+        )
     )
 ```
 
