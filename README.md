@@ -24,7 +24,7 @@ Or add it to your `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/your-org/union-fonts", from: "1.0.0")
+    .package(url: "https://github.com/unionst/union-fonts", from: "1.0.0")
 ]
 ```
 
@@ -48,7 +48,8 @@ struct ContentView: View {
                     weight: .bold,
                     design: .rounded,
                     openTypeFeatures: ["cv09": 1, "cv10": 1]
-                ))
+                )
+                )
         }
     }
 }
@@ -68,7 +69,8 @@ Text("$199.99")
             OpenTypeFeatures.characterVariant(9): 1,  // cv09
             OpenTypeFeatures.characterVariant(10): 1  // cv10
         ]
-    ))
+    )
+    )
 ```
 
 ### Stylistic Sets
@@ -82,7 +84,8 @@ Text("Typography")
         openTypeFeatures: [
             OpenTypeFeatures.stylisticSet(1): 1  // ss01
         ]
-    ))
+    )
+    )
 ```
 
 ### Ligatures and Kerning
@@ -98,7 +101,8 @@ Text("Office")
             OpenTypeFeatures.discretionaryLigatures: false,
             OpenTypeFeatures.kerning: true
         ]
-    ))
+    )
+    )
 ```
 
 ### Boolean Feature Syntax
@@ -114,7 +118,8 @@ Text("Code 0123")
             OpenTypeFeatures.slashedZero: true,
             OpenTypeFeatures.standardLigatures: false
         ]
-    ))
+    )
+    )
 ```
 
 ## Advanced Usage
@@ -207,7 +212,8 @@ Text("$4,299.99")
         weight: .bold,
         design: .rounded,
         openTypeFeatures: ["cv09": 1, "cv10": 1]
-    ))
+    )
+    )
 ```
 
 This creates a smaller, less intrusive dollar sign that doesn't overpower the numbers.
@@ -225,7 +231,8 @@ Text("let value = 0123")
             OpenTypeFeatures.slashedZero: true,
             OpenTypeFeatures.standardLigatures: false
         ]
-    ))
+    )
+    )
 ```
 
 ### Typography-Focused Apps
@@ -242,7 +249,8 @@ Text("Beautiful Typography")
             OpenTypeFeatures.stylisticSet(1): 1,
             OpenTypeFeatures.discretionaryLigatures: 1
         ]
-    ))
+    )
+    )
 ```
 
 ## API Reference
